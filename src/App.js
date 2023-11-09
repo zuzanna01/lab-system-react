@@ -1,14 +1,13 @@
 import './App.css';
-import BannerComponent from './Banner';
-import ResultForm from './ResultForm'
+import { MyRoutes } from './Routes';
 
 function App() {
   return (
     <div className="App">
-      <BannerComponent/>
-      <ResultForm/>
+      <MyRoutes/>
     </div>
   );
 }
 
 export default App;
+

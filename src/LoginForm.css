@@ -1,21 +1,18 @@
-.result-form {  
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    background-color: #f0f0f0;
+.login-form { 
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    width: 100%;
-    max-width: 700px; 
+    background-color: #f0f0f0;
+    width: 100%; 
+    max-width: 700px;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    
 }
 
-
-.result-form input {
+.login-form input {
     width: 100%;
     max-width: 400px;
     padding: 10px;
@@ -24,7 +21,7 @@
     border-radius: 5px;
 }
 
-.result-form button {
+.login-form button {
     background-color: #7b68ee; /* Violet as the main color */
     color: white;
     padding: 10px 20px;
@@ -35,11 +32,11 @@
     transition: background-color 0.3s;
 }
 
-.result-form button:hover {
+.login-form button:hover {
     background-color: #6b5ac3; /* Slightly darker violet on hover */
 }
 
 .instrucion {
+    margin-top: 5px;
     font-size: 17px;
-    white-space: pre-wrap;
 }

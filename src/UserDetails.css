@@ -1,0 +1,23 @@
+.user-details { 
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+    background-color: #f0f0f0;
+    width: 100%; 
+    max-width: 700px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.description{
+    text-decoration: underline;
+    color: #696161;
+    font-size: 15px;
+}
+
+.user-icon{
+    font-size: 100px;
+    
+}

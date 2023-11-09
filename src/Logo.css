@@ -1,6 +1,6 @@
 .banner {
     background-color: #6b5ac3; /* Purple (you can use any other purple color code) */
-    color: #fff; /* White text color */
+    color: white; /* White text color */
     padding: 12px;
     display: flex;
     align-items: center;
@@ -17,4 +17,5 @@
     font-size: 24px;
     font-weight: bold;
     color: #fff;
+    cursor: pointer;
 }

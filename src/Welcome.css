@@ -1,0 +1,53 @@
+.welcome-banner{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    background-color: #cfcbe8 ;
+    color: #0e0639;;
+}
+
+.welcome-banner img {
+    max-width: 40%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px; 
+}
+
+.left-side {
+    flex-direction: column; 
+    max-width: 60%;  
+}
+
+.welcome-banner h1 {
+    font-size: 35px;
+    padding-bottom: 20px;
+}
+
+.city-input-container {
+    display: flex;
+    align-items: center;
+    background-color: #ada5d9; 
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.welcome-banner input {
+    margin-left: 10px;
+    padding: 10px;
+    background-color: #ada5d9;
+    border: none;
+    outline: none; 
+    font-size: 20px;
+    color: #0e0639;
+    border-radius: 10px;
+}
+
+.welcome-banner ::placeholder{
+    color: #0e0639;;
+}
+
+.pin-icon{
+    font-size: 27px;
+}

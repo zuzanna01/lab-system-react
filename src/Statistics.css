@@ -1,0 +1,6 @@
+.list-statistics{
+    direction: flex;
+    flex-direction: row;
+    font-size: 22px;
+    row-gap: 10px;
+}

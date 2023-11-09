@@ -6,12 +6,13 @@ function ResultForm() {
     return (
         <div className="result-form">
            <Logo/>
-            <div className="instrucion">
-                    <p>
-                     Wprowadź numer zlecenia oraz datę urodzenia pacjenta,
-                    </p>
-                    aby otrzymać dostęp do wyników badań.   
-            </div>
+         
+                <span  className="instrucion">
+                    Wprowadź numer zlecenia oraz datę urodzenia pacjenta, 
+                    <br/>
+                    aby otrzymać dostęp do wyników badań.
+                </span>
+                      
             <input type="text" placeholder="numer zlecenia" />
             <input type="date" placeholder="2001-11-03" />
             <button type="submit" className="check-button">Sprawdź wyniki</button>

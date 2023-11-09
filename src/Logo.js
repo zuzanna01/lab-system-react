@@ -6,7 +6,7 @@ function Logo(){
     return(
         <div className="banner">
             <FaTint className="blood-drop-icon" />
-            <span className="lab-text">LABORATORIUM</span>
+            <span className="lab-text"  onClick={event =>  window.location.href='/home'}>LABORATORIUM</span>
         </div>
     )
    
