@@ -22,9 +22,10 @@
   }
   
   .nav-item {
-    font-size: 19px;
+    font-size: 15px;
     color: #fff; 
     text-transform: uppercase;
+    text-align: center;
     cursor: pointer;
     transition: color 0.3s;
     border: 1px solid transparent;
