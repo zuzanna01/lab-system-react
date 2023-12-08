@@ -1,0 +1,91 @@
+.file-upload {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    width: 100%; 
+    max-width: 700px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.file-upload-container {
+    max-width: 800px; /* Increase the max-width for a wider container */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    border: 2px dashed #ccc; /* Dashed border for upload area */
+    cursor: pointer;
+}
+
+.upload-box,
+.file-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.drive-icon {
+    width: 80px; /* Adjust the size of the icon */
+    height: auto;
+    margin-bottom: 10px; /* Space between icon and text */
+}
+
+.file-upload-container p {
+    margin: 5px 0;
+}
+
+/* Style for when dragging over the drop area */
+.file-upload-container:hover {
+    border-color: #7b68ee; /* Change to your preferred highlight color */
+}
+
+.file-info {
+    border: 1px solid #ccc; /* Border for file info */
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.violet-icon {
+    color: #7b68ee /* Violet color */
+}
+
+.file-upload button {
+    background-color: #7b68ee; /* Violet as the main color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.file-upload button:hover {
+    background-color: #6b5ac3; /* Slightly darker violet on hover */
+}
+
+.order-number-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .order-label {
+    margin-right: 10px;
+  }
+  
+  .order-number-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    border-color: #7b68ee;
+    outline-color: #7b68ee;
+  }
+
+
