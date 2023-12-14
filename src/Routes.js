@@ -1,10 +1,12 @@
-import {BrowserRouter, Routes, Route } from 'react-router-dom';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 import {HomePage} from './pages/HomePage';
 import {LoginPage} from './pages/LoginPage';
 import {ResultFormPage} from './pages/ResultFormPage';
+import {ResultPage} from './pages/ResultPage';
 import {UserPage} from './pages/UserPage';
 import {UploadPage} from './pages/UploadPage';
+import UnauthorizedPage from './pages/UnauthorizedPage';
 
 export const MyRoutes = () => {
     return (
@@ -16,6 +18,8 @@ export const MyRoutes = () => {
             <Route path = "/result" element = {<ResultFormPage/>}/>
             <Route path = "/user" element = {<UserPage/>}/>
             <Route path = "/upload" element = {<UploadPage/>}/>
+            <Route path = "/unauthorized" element = {<UnauthorizedPage/>} />
+           
         </Routes>
         </BrowserRouter>
        

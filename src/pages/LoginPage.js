@@ -11,7 +11,7 @@ export const LoginPage = () => {
         </div>
         
         <div className="content"> 
-           <LoginForm/>
+            <LoginForm/>
         </div>
 
     </div>    

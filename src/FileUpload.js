@@ -2,10 +2,29 @@ import React, { useState } from 'react';
 import { useDropzone } from 'react-dropzone';
 import './FileUpload.css'; 
 import { FaFile } from 'react-icons/fa'; 
+import { request } from './AxiosHelper';
 
 const FileUpload = () => {
   const [uploadedFile, setUploadedFile] = useState(null);
   const [orderNumber, setOrderNumber] = useState('');
+
+  const handleUpload = async () => {
+    if (uploadedFile) {
+      const reader = new FileReader();
+      reader.onload = async () => {
+        try {
+          const fileContent = reader.result;
+          await request('POST', '/result', { file:fileContent });
+          setUploadedFile(null);
+          setOrderNumber('');
+        } catch (error) {
+          console.error('Error while uploading:', error);
+          // Handle error
+        }
+      };
+      reader.readAsText(uploadedFile);
+    }
+  };
 
   const { getRootProps, getInputProps } = useDropzone({
     onDrop: (acceptedFiles) => {
@@ -51,11 +70,11 @@ const FileUpload = () => {
         ) : (
           <div className="file-info">
             <FaFile className="drive-icon violet-icon" />
-            <p>Uploaded File: {uploadedFile.name}</p>
+            <p>Wybrany plik: {uploadedFile.name}</p>
           </div>
         )}
       </div>
-      <button type="button" className="share-button">
+      <button type="button" className="share-button" onClick={handleUpload}>
         Udostępnij
       </button>
     </div>

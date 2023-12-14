@@ -1,28 +1,26 @@
 import React, { useState } from 'react';
 import './LoginForm.css';
 import Logo from './Logo';
-import { request, setAuthHeader } from './AxiosHelper';
+import { request } from './AxiosHelper';
 import { useUser } from './UserContext';
 
 function LoginForm() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const { setUser, setIsLoggedIn } = useUser();
+    const {setUser, setIsLoggedIn } = useUser();
 
     const handleLogin = async () => {
             request(
                 "POST",
-                "/user/login",
+                "/auth/login",
                 {   email: email,
                     password: password
                 }).then((response) => {
-                    setAuthHeader(response.data.token);
                     setUser(response.data);
-                    setIsLoggedIn(true)
+                    setIsLoggedIn(true);
                     window.location.href = '/user'
-                }).catch((error) => {
-                    setAuthHeader(null);
+            }).catch((error) => {
                     setUser(null);
                     setIsLoggedIn(false)
                 }

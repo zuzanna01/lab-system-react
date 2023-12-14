@@ -38,3 +38,21 @@
     border: 1px solid #6b5ac3; 
   }
   
+  .logout-btn {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .logout-btn i {
+    margin-right: 5px; /* Adjust the space between icon and text */
+  }
+
+  .logout-btn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: #6b5ac3;
+    font-size: 30px;
+  }
+  

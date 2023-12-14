@@ -6,7 +6,7 @@ function HowItWorks() {
   return (
     <div className = "how-it-wors-banner">
         <div className= "header">
-            <hi>Jak to działa ?</hi>
+            Jak to działa ?
         </div>
         <div className = "list-steps">    
             <p>Umów się <br/> na badanie</p>
