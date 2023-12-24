@@ -17,9 +17,20 @@ function LoginForm() {
                 {   email: email,
                     password: password
                 }).then((response) => {
-                    setUser(response.data);
-                    setIsLoggedIn(true);
-                    window.location.href = '/user'
+                    const user = response.data;
+                    localStorage.setItem('userName', user.userName)
+                    localStorage.setItem('userRole', user.userRole)
+
+                    if (user.userRole === 'ROLE_PATIENT') {
+                        setIsLoggedIn(true);
+                        window.location.href = '/patient';
+                    } 
+                    
+                    if (user.userRrole === 'ROLE_EMPLOYEE') {
+                        setIsLoggedIn(true);
+                        window.location.href = '/lab';
+                    } 
+                   
             }).catch((error) => {
                     setUser(null);
                     setIsLoggedIn(false)

@@ -1,37 +1,51 @@
+/* ResultList.css */
+
 .results-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0f0f0;
-    width: 100%;
-    max-width: 700px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  .results-container button {
-    background-color: #7b68ee;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s;
-    margin-top: 10px;
-  }
-  
-  .results-container button:hover {
-    background-color: #6b5ac3;
-  }
-  
-  .results-container .instruction {
-    margin-top: 5px;
-    font-size: 17px;
-  }
-  
-  .results-container > div {
-    margin-top: 15px;
-  }
+  margin-top: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding-bottom: 15px;
+}
+
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.table-header {
+  background-color: #f0f0f0;
+  padding: 14px 16px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  border-bottom: 2px solid #ddd;
+}
+
+.results-table td {
+  border: 1px solid #e0e0e0;
+  padding: 12px 16px;
+  font-size: 13px;
+}
+
+.download-btn {
+  background-color: #5e72e4;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.download-btn:hover {
+  background-color: #485cc7;
+}
