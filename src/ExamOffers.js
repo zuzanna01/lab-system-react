@@ -3,6 +3,7 @@ import axios from 'axios';
 import './ExamOffers.css'; 
 import PageNavigation from './PageNavigation';
 import ExamReservation from './ExamReservation';
+import { useUser } from './UserContext';
 
 const ExamOffers = () => {
   const pageSize = 2;
@@ -10,6 +11,7 @@ const ExamOffers = () => {
   const [currentPage, setCurrentPage] = useState(0); // Initial page number
   const [totalPages, setTotalPages] = useState(0);
   const [selectedOfferId, setSelectedOfferId] = useState(null);
+  const { user, isLoggedIn } = useUser();
 
   useEffect(() => {
     const fetchExamOffers = async () => {
@@ -49,19 +51,22 @@ const ExamOffers = () => {
         <div key={offer.id} className="exam-offer-box-container">
           <div className="exam-offer-box">
             <div className='name'>
-               <h3>{offer.name}</h3>
+              <h3>{offer.name}</h3>
               <h5>{offer.additionalInformation}</h5>
             </div>
            
             <p>{offer.description}</p>
             <p>Wymagania: {offer.requirements}</p>
             <p>Cena: {offer.price}</p>
+            {isLoggedIn && user.userRole === 'ROLE_PATIENT' && (
             <button className='reservationButton' onClick={() => handleReservation(offer.id)}>ZAREZERWUJ</button>
+            )}
             {selectedOfferId === offer.id && (
               <ExamReservation 
                 examOfferId={selectedOfferId}
               />
             )}
+          
           </div>
         </div>
       ))}

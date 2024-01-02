@@ -6,36 +6,51 @@ import { useUser } from './UserContext';
 import { FaPowerOff } from 'react-icons/fa'; 
 
 function BannerComponent() {
-  const { user, setUser, setIsLoggedIn } = useUser();
+  const { user, isLoggedIn, setUser, setIsLoggedIn } = useUser();
 
   useEffect(() => {
+    const storedUserName = sessionStorage.getItem('userName');
+    const storedUserRole = sessionStorage.getItem('userRole');
     
-  }
-  
-  , []);
+    if (storedUserName && storedUserRole) {
+      const storedUser = {
+        userName: storedUserName,
+        userRole: storedUserRole,
+      };
+      setUser(storedUser);
+      setIsLoggedIn(true);
+    }
+  }, [setUser, setIsLoggedIn]);
   
   const handleUserDetailsClick = () => {
-    window.location.href = '/user';
+    if (user.userRole === 'ROLE_PATIENT') {
+        setIsLoggedIn(true);
+        window.location.href = '/patient';
+    } 
+    
+    if (user.userRole === 'ROLE_EMPLOYEE') {
+        setIsLoggedIn(true);
+        window.location.href = '/lab';
+    } 
   };
 
   const handleLogout = () => {
     setUser(null);
     setIsLoggedIn(false);
+    sessionStorage.clear();
     window.location.href = '/home';
   };
-
-  
 
   return (
     <nav className="nav-bar">
       <ul className="nav-list">
-        <Logo />
+        <Logo/>
         <li className="nav-item" onClick={event => window.location.href = '/exams'}>katalog badań</li>
         <li className="nav-item" onClick={event => window.location.href = '/result'}>odbierz wyniki</li>
         <li className="nav-item">poradnik</li>
-        {user ? (
+        {isLoggedIn ? (
           <React.Fragment>
-            <li className="nav-item" onClick={handleUserDetailsClick}>{`${user.name} ${user.lastname}`}</li>
+            <li className="nav-item" onClick={handleUserDetailsClick}>{`${user.userName}`}</li>
             <li className="nav-item logout-btn" onClick={handleLogout}>
               <FaPowerOff /> 
             </li>

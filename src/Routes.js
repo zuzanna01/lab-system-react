@@ -8,6 +8,7 @@ import {LabPage} from './pages/LabPage';
 import {UploadPage} from './pages/UploadPage';
 import { ExamPage } from './pages/ExamPage';
 import UnauthorizedPage from './pages/UnauthorizedPage';
+import { AdminPage } from './pages/AdminPage';
 
 export const MyRoutes = () => {
     return (
@@ -21,6 +22,7 @@ export const MyRoutes = () => {
             <Route path = "/patient" element = {<PatientPage/>}/>
             <Route path = "/lab" element = {<LabPage/>}/>
             <Route path = "/upload" element = {<UploadPage/>}/>
+            <Route path = "/admin" element = {<AdminPage/>}/>
             <Route path = "/unauthorized" element = {<UnauthorizedPage/>} />
         </Routes>
         </BrowserRouter>

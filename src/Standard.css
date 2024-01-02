@@ -1,0 +1,31 @@
+.standard-button { 
+    background-color: #7b68ee; 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.standard-button:hover {
+    background-color: #6b5ac3; 
+}
+
+.standard-input {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    width: 80%;
+    align-items: center;
+}

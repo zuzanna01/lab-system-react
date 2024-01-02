@@ -1,19 +1,4 @@
-/* Updated styling for the dropdown */
-.lab-dropdown {
-    width: 50%;
-    padding: 8px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px;
-    outline: none;
-    background-color: white;
-    cursor: pointer;
-    background-repeat: no-repeat;
-    background-position: calc(100% - 10px) center;
-    padding-right: 30px;
-  }
-  
+
   /* Styling for the confirmation button */
   .confirmation-button {
     background-color: #7b68ee; 
@@ -33,12 +18,7 @@
   }
   
   /* Styling for the dropdown options */
-  .lab-dropdown option {
-    font-size: 14px;
-    padding: 8px;
-    background-color: white;
-    color: #333;
-  }
+ 
   
   .lab-dropdown option:hover {
     background-color: #f0f0f0;

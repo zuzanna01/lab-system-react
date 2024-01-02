@@ -1,0 +1,26 @@
+.lab-selection {
+  margin: 10px;
+}
+
+.lab-dropdown {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+    background-color: white;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: calc(100% - 10px) center;
+    padding-right: 30px;
+  }
+
+  .lab-dropdown option {
+    font-size: 14px;
+    padding: 8px;
+    background-color: white;
+    color: #333;
+  }
+  

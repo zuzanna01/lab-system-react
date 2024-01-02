@@ -1,11 +1,15 @@
 /* ResultList.css */
 
 .results-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin-top: 20px;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding-bottom: 15px;
+  width: 800px;
 }
 
 .results-table {

@@ -4,7 +4,7 @@ import './ResultList.css';
 import PageNavigation from './PageNavigation';
 
 const AppointmentList = () => {
-  const pageSize = 2;
+  const pageSize = 5;
   const [appointmentsData, setAppointmentsData] = useState([]);
   const [currentPage, setCurrentPage] = useState(0);
   const [totalPages, setTotalPages] = useState(0);
