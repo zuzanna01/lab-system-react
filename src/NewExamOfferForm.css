@@ -1,0 +1,56 @@
+
+.exam-creation { 
+    display: flex;
+    flex-direction: column;
+  
+    
+    background-color: #f0f0f0;
+    width: 100%; 
+    max-width: 770px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.exam form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    width: 100%; 
+    max-width: 700px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+   
+}
+
+.exam label { 
+    margin-left: 15px;
+    margin-right: 15px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+.exam select[multiple],
+.exam input,
+.exam textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+   
+}
+
+.exam select[multiple] {
+  height: 100px;
+}
+
+.exam select[multiple] option:selected {
+    background-color: #e6dbff; /* Use your preferred violet/light background color */
+    color: #333; /* Adjust the text color as needed */
+}
